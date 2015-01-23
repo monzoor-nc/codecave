@@ -1,0 +1,35 @@
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+#home{
+	@include center(1100px,20px);
+	@extend %center;
+	background: url(../images/monzoor.png) no-repeat right bottom ;
+	article{
+		@include col(1/2);
+		@extend %center;
+		height: 500px;
+		text-align: center;
+		h2{
+			@include font($lato,300, 48px, 50px);
+		}
+		h1{
+			margin-top: 20px;
+			@include font($grand-hotel,700, 40px, 50px);
+		}
+		p{
+			margin-top: 20px;
+			@include font($lato,400);
+		}
+	}
+}
