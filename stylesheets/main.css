@@ -487,7 +487,39 @@ nav li:last-child {
 #portfolio article > div:last-child {
   margin-right: 0%;
 }
-/* line 40, ../sass/page/_portfolio.scss */
+/* line 38, ../sass/page/_portfolio.scss */
+#portfolio article > div .urls {
+  float: left;
+  margin-top: 30px;
+  text-align: left;
+}
+/* line 42, ../sass/page/_portfolio.scss */
+#portfolio article > div .urls [class^="codecave-"] {
+  font-size: 30px;
+  margin-right: 20px;
+  text-decoration: none;
+  margin: 0;
+  color: rgba(35, 31, 32, 0.5);
+}
+/* line 49, ../sass/page/_portfolio.scss */
+#portfolio article > div .urls a {
+  margin-bottom: 10px;
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 23px;
+}
+/* line 53, ../sass/page/_portfolio.scss */
+#portfolio article > div .urls a span {
+  text-decoration: underline;
+  margin-top: 5px;
+  margin-left: 16px;
+  display: block;
+  float: left;
+}
+/* line 65, ../sass/page/_portfolio.scss */
 #portfolio .slider-wrapper {
   *zoom: 1;
   float: left;
@@ -512,7 +544,7 @@ nav li:last-child {
 #portfolio .slider-wrapper:last-child {
   margin-right: 0%;
 }
-/* line 44, ../sass/page/_portfolio.scss */
+/* line 69, ../sass/page/_portfolio.scss */
 #portfolio .slider-wrapper .slider {
   *zoom: 1;
   float: left;
@@ -543,12 +575,12 @@ nav li:last-child {
 #portfolio .slider-wrapper .slider:last-child {
   margin-right: 0%;
 }
-/* line 49, ../sass/page/_portfolio.scss */
+/* line 74, ../sass/page/_portfolio.scss */
 #portfolio .slider-wrapper .slider li {
   list-style: none;
   float: left;
 }
-/* line 52, ../sass/page/_portfolio.scss */
+/* line 77, ../sass/page/_portfolio.scss */
 #portfolio .slider-wrapper .slider li li {
   *zoom: 1;
   float: left;
@@ -574,11 +606,11 @@ nav li:last-child {
 #portfolio .slider-wrapper .slider li li:last-child {
   margin-right: 0%;
 }
-/* line 57, ../sass/page/_portfolio.scss */
+/* line 82, ../sass/page/_portfolio.scss */
 #portfolio .slider-wrapper .slider li li:nth-child(even) {
   margin-left: 3%;
 }
-/* line 60, ../sass/page/_portfolio.scss */
+/* line 85, ../sass/page/_portfolio.scss */
 #portfolio .slider-wrapper .slider li li span {
   position: absolute;
   left: 0;
@@ -589,20 +621,21 @@ nav li:last-child {
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 67, ../sass/page/_portfolio.scss */
+/* line 92, ../sass/page/_portfolio.scss */
 #portfolio .slider-wrapper .slider li li span:hover {
   background-color: rgba(248, 201, 49, 0);
 }
-/* line 71, ../sass/page/_portfolio.scss */
+/* line 96, ../sass/page/_portfolio.scss */
 #portfolio .slider-wrapper .slider li li img {
   width: 100%;
+  height: 125px;
 }
-/* line 76, ../sass/page/_portfolio.scss */
+/* line 102, ../sass/page/_portfolio.scss */
 #portfolio .slider-wrapper .slider .dots {
   display: table;
   margin: 0px auto;
 }
-/* line 79, ../sass/page/_portfolio.scss */
+/* line 105, ../sass/page/_portfolio.scss */
 #portfolio .slider-wrapper .slider .dots li {
   display: inline-block;
   width: 15px;
@@ -617,7 +650,7 @@ nav li:last-child {
   -moz-transition: background .5s, opacity .5s;
   transition: background .5s, opacity .5s;
 }
-/* line 92, ../sass/page/_portfolio.scss */
+/* line 118, ../sass/page/_portfolio.scss */
 #portfolio .slider-wrapper .slider .dots li.active {
   background: #231f20;
   opacity: 1;
