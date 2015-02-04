@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Grand+Hotel|EB+Garamond|Dancing+Script:400,700);
-/* line 5, ../../../.rvm/gems/ruby-2.1.2@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../.rvm/gems/ruby-2.1.2@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../.rvm/gems/ruby-2.1.2@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../.rvm/gems/ruby-2.1.2@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../.rvm/gems/ruby-2.1.2@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../.rvm/gems/ruby-2.1.2@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../.rvm/gems/ruby-2.1.2@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../.rvm/gems/ruby-2.1.2@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../.rvm/gems/ruby-2.1.2@global/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -197,171 +196,5 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /**
  * Apply a clearfix to an element.
  */
-/* line 1, ../sass/common/_common.scss */
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #f8c931;
-  color: #231f20;
-}
-
-/* line 7, ../sass/common/_common.scss */
-* a {
-  text-decoration: none;
-  color: #231f20;
-}
-
-/* line 12, ../sass/common/_common.scss */
-nav, #home, #home article {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-@font-face {
-  font-family: 'codecave';
-  src: url("../fonts/codecave.eot?-5vxnnk");
-  src: url("../fonts/codecave.eot?#iefix-5vxnnk") format("embedded-opentype"), url("../fonts/codecave.woff?-5vxnnk") format("woff"), url("../fonts/codecave.ttf?-5vxnnk") format("truetype"), url("../fonts/codecave.svg?-5vxnnk#codecave") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-/* line 12, ../sass/common/_icon.scss */
-[class^="codecave-"], [class*=" codecave-"] {
-  font-family: 'codecave';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* line 26, ../sass/common/_icon.scss */
-.codecave-camera:before {
-  content: "\e600";
-}
-
-/* line 30, ../sass/common/_icon.scss */
-.codecave-briefcase:before {
-  content: "\e601";
-}
-
-/* line 34, ../sass/common/_icon.scss */
-.codecave-home:before {
-  content: "\e602";
-}
-
-/* line 38, ../sass/common/_icon.scss */
-.codecave-envelope:before {
-  content: "\e603";
-}
-
-/* line 1, ../sass/common/_nav.scss */
-nav {
-  left: 20px;
-  width: 40px;
-  height: 163px;
-  margin: auto 0;
-}
-/* line 7, ../sass/common/_nav.scss */
-nav li {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-/* line 10, ../sass/common/_nav.scss */
-nav li:last-child {
-  margin-bottom: 0;
-}
-
-/*  Syntax Quick Reference
-  --------------------------
-  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
-  span($ratio: 1, $offset: 0)
-  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
-  unshift()
-  edit()
-  center($max_width: 1410px, $pad: 0)
-  stack($pad: 0, $align: false)
-  unstack()
-  align($direction: both)
-  cf()
-*/
-/* line 14, ../sass/page/_index.scss */
-#home {
-  *zoom: 1;
-  width: auto;
-  max-width: 1100px;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: url(../images/monzoor.png) no-repeat right bottom;
-}
-/* line 344, ../sass/vendor/jeet/_grid.scss */
-#home:before, #home:after {
-  content: '';
-  display: table;
-}
-/* line 349, ../sass/vendor/jeet/_grid.scss */
-#home:after {
-  clear: both;
-}
-/* line 18, ../sass/page/_index.scss */
-#home article {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 48.5%;
-  margin-left: 0%;
-  margin-right: 3%;
-  height: 500px;
-  text-align: center;
-}
-/* line 344, ../sass/vendor/jeet/_grid.scss */
-#home article:before, #home article:after {
-  content: '';
-  display: table;
-}
-/* line 349, ../sass/vendor/jeet/_grid.scss */
-#home article:after {
-  clear: both;
-}
-/* line 58, ../sass/vendor/jeet/_grid.scss */
-#home article:last-child {
-  margin-right: 0%;
-}
-/* line 23, ../sass/page/_index.scss */
-#home article h2 {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 48px;
-  line-height: 50px;
-}
-/* line 26, ../sass/page/_index.scss */
-#home article h1 {
-  margin-top: 20px;
-  font-family: "Grand Hotel", cursive;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 40px;
-  line-height: 50px;
-}
-/* line 30, ../sass/page/_index.scss */
-#home article p {
-  margin-top: 20px;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 23px;
-}
+/* No files to import found in common/*\/*.* */
+/* No files to import found in page/*\/*.* */
