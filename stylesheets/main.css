@@ -212,7 +212,7 @@ body {
 }
 
 /* line 12, ../sass/common/_common.scss */
-nav, #home, #home article {
+nav, #home, #home article, #portfolio, #portfolio article > div {
   position: absolute;
   left: 0;
   right: 0;
@@ -223,8 +223,8 @@ nav, #home, #home article {
 
 @font-face {
   font-family: 'codecave';
-  src: url("../fonts/codecave.eot?-5vxnnk");
-  src: url("../fonts/codecave.eot?#iefix-5vxnnk") format("embedded-opentype"), url("../fonts/codecave.woff?-5vxnnk") format("woff"), url("../fonts/codecave.ttf?-5vxnnk") format("truetype"), url("../fonts/codecave.svg?-5vxnnk#codecave") format("svg");
+  src: url("../fonts/codecave.eot?44ypy");
+  src: url("../fonts/codecave.eot?#iefix44ypy") format("embedded-opentype"), url("../fonts/codecave.woff?44ypy") format("woff"), url("../fonts/codecave.ttf?44ypy") format("truetype"), url("../fonts/codecave.svg?44ypy#codecave") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -243,21 +243,31 @@ nav, #home, #home article {
 }
 
 /* line 26, ../sass/common/_icon.scss */
+.codecave-github:before {
+  content: "\e604";
+}
+
+/* line 30, ../sass/common/_icon.scss */
+.codecave-behance:before {
+  content: "\e605";
+}
+
+/* line 34, ../sass/common/_icon.scss */
 .codecave-camera:before {
   content: "\e600";
 }
 
-/* line 30, ../sass/common/_icon.scss */
+/* line 38, ../sass/common/_icon.scss */
 .codecave-briefcase:before {
   content: "\e601";
 }
 
-/* line 34, ../sass/common/_icon.scss */
+/* line 42, ../sass/common/_icon.scss */
 .codecave-home:before {
   content: "\e602";
 }
 
-/* line 38, ../sass/common/_icon.scss */
+/* line 46, ../sass/common/_icon.scss */
 .codecave-envelope:before {
   content: "\e603";
 }
@@ -364,4 +374,284 @@ nav li:last-child {
   font-style: normal;
   font-size: 16px;
   line-height: 23px;
+}
+
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/* line 14, ../sass/page/_portfolio.scss */
+#portfolio {
+  *zoom: 1;
+  width: auto;
+  max-width: 1100px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+#portfolio:before, #portfolio:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+#portfolio:after {
+  clear: both;
+}
+/* line 17, ../sass/page/_portfolio.scss */
+#portfolio article {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  height: 100%;
+  text-align: center;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+#portfolio article:before, #portfolio article:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+#portfolio article:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+#portfolio article:last-child {
+  margin-right: 0%;
+}
+/* line 21, ../sass/page/_portfolio.scss */
+#portfolio article h1 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 45px;
+  line-height: 48px;
+}
+/* line 24, ../sass/page/_portfolio.scss */
+#portfolio article h2 {
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 23px;
+}
+/* line 30, ../sass/page/_portfolio.scss */
+#portfolio article p {
+  margin-top: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 23px;
+}
+/* line 34, ../sass/page/_portfolio.scss */
+#portfolio article > div {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  height: 500px;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+#portfolio article > div:before, #portfolio article > div:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+#portfolio article > div:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+#portfolio article > div:last-child {
+  margin-right: 0%;
+}
+/* line 38, ../sass/page/_portfolio.scss */
+#portfolio article > div .urls {
+  float: left;
+  margin-top: 30px;
+  text-align: left;
+}
+/* line 42, ../sass/page/_portfolio.scss */
+#portfolio article > div .urls [class^="codecave-"] {
+  font-size: 30px;
+  margin-right: 20px;
+  text-decoration: none;
+  margin: 0;
+  color: rgba(35, 31, 32, 0.5);
+}
+/* line 49, ../sass/page/_portfolio.scss */
+#portfolio article > div .urls a {
+  margin-bottom: 10px;
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 23px;
+}
+/* line 53, ../sass/page/_portfolio.scss */
+#portfolio article > div .urls a span {
+  text-decoration: underline;
+  margin-top: 5px;
+  margin-left: 16px;
+  display: block;
+  float: left;
+}
+/* line 65, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  height: 100%;
+  position: relative;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+#portfolio .slider-wrapper:before, #portfolio .slider-wrapper:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+#portfolio .slider-wrapper:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+#portfolio .slider-wrapper:last-child {
+  margin-right: 0%;
+}
+/* line 69, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 82.83333%;
+  margin-left: 0%;
+  margin-right: 3%;
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 460px !important;
+  position: relative;
+  overflow: auto;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+#portfolio .slider-wrapper .slider:before, #portfolio .slider-wrapper .slider:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+#portfolio .slider-wrapper .slider:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+#portfolio .slider-wrapper .slider:last-child {
+  margin-right: 0%;
+}
+/* line 74, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider li {
+  list-style: none;
+  float: left;
+}
+/* line 77, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider li li {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+  margin-right: 0;
+  margin-bottom: 3%;
+  position: relative;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+#portfolio .slider-wrapper .slider li li:before, #portfolio .slider-wrapper .slider li li:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+#portfolio .slider-wrapper .slider li li:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+#portfolio .slider-wrapper .slider li li:last-child {
+  margin-right: 0%;
+}
+/* line 82, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider li li:nth-child(even) {
+  margin-left: 3%;
+}
+/* line 85, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider li li span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(248, 201, 49, 0.5);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/* line 92, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider li li span:hover {
+  background-color: rgba(248, 201, 49, 0);
+}
+/* line 96, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider li li img {
+  width: 100%;
+  height: 125px;
+}
+/* line 102, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider .dots {
+  display: table;
+  margin: 0px auto;
+}
+/* line 105, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider .dots li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 4px;
+  text-indent: -999em;
+  background-color: rgba(35, 31, 32, 0.5);
+  border-radius: 100%;
+  cursor: pointer;
+  opacity: .4;
+  -webkit-transition: background .5s, opacity .5s;
+  -moz-transition: background .5s, opacity .5s;
+  transition: background .5s, opacity .5s;
+}
+/* line 118, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider .dots li.active {
+  background: #231f20;
+  opacity: 1;
 }
