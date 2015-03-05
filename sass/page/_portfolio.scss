@@ -12,8 +12,8 @@
   cf()
 */
 #portfolio{
-	@include center(1100px,20px);
-	@extend %center;
+	// @include center(1100px,20px);
+	// @extend %center;
 	article{
 		@include column(1/2, $gutter: 0);
 		height: 100%;
@@ -32,9 +32,10 @@
 			@include font($lato,400);
 		}
 		>div{
-			@include column(1/2, $gutter: 0);
+			width: 40%;
 			@extend %center;
 			height: 500px;
+			margin-left: 10%;
 			.urls{
 				float: left;
 				margin-top: 30px;
@@ -63,7 +64,8 @@
 		}
 	}
 	.slider-wrapper{
-		@include column(1/2, $gutter: 0);
+		width: 38%;
+		float: left;
 		height: 100%;
 		position: relative;
 		.slider{
@@ -71,6 +73,23 @@
 			@include align($direction: both);
 			height: 460px !important;
 			position: relative; overflow: auto;
+			.slider--main{
+				height: 421px !important;
+			}
+			.slider--main2{
+				li{
+					li {
+						height: 125px;
+						overflow: hidden;
+						img {
+							height: auto !important;
+							-ms-transform: translateY(-14%); 
+						    -webkit-transform: translateY(-14%); 
+						    transformY: translateY(-14%);
+						}
+					}
+				}
+			}
 			li{
 				list-style: none;
 				float: left;
@@ -123,4 +142,7 @@
 			}
 		}
 	}
+}
+#flickr{
+	@extend #portfolio;
 }

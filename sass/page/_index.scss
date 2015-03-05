@@ -12,14 +12,16 @@
   cf()
 */
 #home{
-	@include center(1100px,20px);
-	@extend %center;
+	// @include center(1100px,20px);
+	// @extend %center;
 	background: url(../images/monzoor.png) no-repeat right bottom ;
+	position: relative;
 	article{
 		@include col(1/2);
 		@extend %center;
 		height: 500px;
 		text-align: center;
+		margin-left: 10%;
 		h2{
 			@include font($lato,300, 48px, 50px);
 		}

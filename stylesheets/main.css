@@ -203,22 +203,41 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #f8c931;
   color: #231f20;
+  overflow: hidden;
 }
 
-/* line 7, ../sass/common/_common.scss */
+/* line 8, ../sass/common/_common.scss */
 * a {
   text-decoration: none;
   color: #231f20;
 }
 
-/* line 12, ../sass/common/_common.scss */
-nav, #home, #home article, #portfolio, #portfolio article > div {
+/* line 13, ../sass/common/_common.scss */
+section {
+  float: left !important;
+  position: relative;
+}
+
+/* line 17, ../sass/common/_common.scss */
+nav, #home article, #portfolio article > div, #flickr article > div {
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   margin: auto;
+}
+
+/* line 25, ../sass/common/_common.scss */
+.QOverlay {
+  background-color: #000000;
+  z-index: 9999;
+}
+
+/* line 30, ../sass/common/_common.scss */
+.QLoader {
+  background-color: #CCCCCC;
+  height: 1px;
 }
 
 @font-face {
@@ -278,13 +297,15 @@ nav {
   width: 40px;
   height: 163px;
   margin: auto 0;
+  z-index: 999999;
+  position: fixed;
 }
-/* line 7, ../sass/common/_nav.scss */
+/* line 9, ../sass/common/_nav.scss */
 nav li {
   font-size: 30px;
   margin-bottom: 10px;
 }
-/* line 10, ../sass/common/_nav.scss */
+/* line 12, ../sass/common/_nav.scss */
 nav li:last-child {
   margin-bottom: 0;
 }
@@ -304,27 +325,10 @@ nav li:last-child {
 */
 /* line 14, ../sass/page/_index.scss */
 #home {
-  *zoom: 1;
-  width: auto;
-  max-width: 1100px;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 20px;
-  padding-right: 20px;
   background: url(../images/monzoor.png) no-repeat right bottom;
+  position: relative;
 }
-/* line 344, ../sass/vendor/jeet/_grid.scss */
-#home:before, #home:after {
-  content: '';
-  display: table;
-}
-/* line 349, ../sass/vendor/jeet/_grid.scss */
-#home:after {
-  clear: both;
-}
-/* line 18, ../sass/page/_index.scss */
+/* line 19, ../sass/page/_index.scss */
 #home article {
   *zoom: 1;
   float: left;
@@ -335,6 +339,7 @@ nav li:last-child {
   margin-right: 3%;
   height: 500px;
   text-align: center;
+  margin-left: 10%;
 }
 /* line 344, ../sass/vendor/jeet/_grid.scss */
 #home article:before, #home article:after {
@@ -349,7 +354,7 @@ nav li:last-child {
 #home article:last-child {
   margin-right: 0%;
 }
-/* line 23, ../sass/page/_index.scss */
+/* line 25, ../sass/page/_index.scss */
 #home article h2 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
@@ -357,7 +362,7 @@ nav li:last-child {
   font-size: 48px;
   line-height: 50px;
 }
-/* line 26, ../sass/page/_index.scss */
+/* line 28, ../sass/page/_index.scss */
 #home article h1 {
   margin-top: 20px;
   font-family: "Grand Hotel", cursive;
@@ -366,7 +371,7 @@ nav li:last-child {
   font-size: 40px;
   line-height: 50px;
 }
-/* line 30, ../sass/page/_index.scss */
+/* line 32, ../sass/page/_index.scss */
 #home article p {
   margin-top: 20px;
   font-family: "Lato", sans-serif;
@@ -389,29 +394,8 @@ nav li:last-child {
   align($direction: both)
   cf()
 */
-/* line 14, ../sass/page/_portfolio.scss */
-#portfolio {
-  *zoom: 1;
-  width: auto;
-  max-width: 1100px;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-/* line 344, ../sass/vendor/jeet/_grid.scss */
-#portfolio:before, #portfolio:after {
-  content: '';
-  display: table;
-}
-/* line 349, ../sass/vendor/jeet/_grid.scss */
-#portfolio:after {
-  clear: both;
-}
 /* line 17, ../sass/page/_portfolio.scss */
-#portfolio article {
+#portfolio article, #flickr article {
   *zoom: 1;
   float: left;
   clear: none;
@@ -423,20 +407,20 @@ nav li:last-child {
   text-align: center;
 }
 /* line 344, ../sass/vendor/jeet/_grid.scss */
-#portfolio article:before, #portfolio article:after {
+#portfolio article:before, #flickr article:before, #portfolio article:after, #flickr article:after {
   content: '';
   display: table;
 }
 /* line 349, ../sass/vendor/jeet/_grid.scss */
-#portfolio article:after {
+#portfolio article:after, #flickr article:after {
   clear: both;
 }
 /* line 58, ../sass/vendor/jeet/_grid.scss */
-#portfolio article:last-child {
+#portfolio article:last-child, #flickr article:last-child {
   margin-right: 0%;
 }
 /* line 21, ../sass/page/_portfolio.scss */
-#portfolio article h1 {
+#portfolio article h1, #flickr article h1 {
   font-family: "Dancing Script", cursive;
   font-weight: 400;
   font-style: normal;
@@ -444,7 +428,7 @@ nav li:last-child {
   line-height: 48px;
 }
 /* line 24, ../sass/page/_portfolio.scss */
-#portfolio article h2 {
+#portfolio article h2, #flickr article h2 {
   margin-top: 20px;
   text-transform: uppercase;
   letter-spacing: .15em;
@@ -455,7 +439,7 @@ nav li:last-child {
   line-height: 23px;
 }
 /* line 30, ../sass/page/_portfolio.scss */
-#portfolio article p {
+#portfolio article p, #flickr article p {
   margin-top: 20px;
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -464,45 +448,27 @@ nav li:last-child {
   line-height: 23px;
 }
 /* line 34, ../sass/page/_portfolio.scss */
-#portfolio article > div {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 50%;
-  margin-left: 0%;
-  margin-right: 0%;
+#portfolio article > div, #flickr article > div {
+  width: 40%;
   height: 500px;
+  margin-left: 10%;
 }
-/* line 344, ../sass/vendor/jeet/_grid.scss */
-#portfolio article > div:before, #portfolio article > div:after {
-  content: '';
-  display: table;
-}
-/* line 349, ../sass/vendor/jeet/_grid.scss */
-#portfolio article > div:after {
-  clear: both;
-}
-/* line 58, ../sass/vendor/jeet/_grid.scss */
-#portfolio article > div:last-child {
-  margin-right: 0%;
-}
-/* line 38, ../sass/page/_portfolio.scss */
-#portfolio article > div .urls {
+/* line 39, ../sass/page/_portfolio.scss */
+#portfolio article > div .urls, #flickr article > div .urls {
   float: left;
   margin-top: 30px;
   text-align: left;
 }
-/* line 42, ../sass/page/_portfolio.scss */
-#portfolio article > div .urls [class^="codecave-"] {
+/* line 43, ../sass/page/_portfolio.scss */
+#portfolio article > div .urls [class^="codecave-"], #flickr article > div .urls [class^="codecave-"] {
   font-size: 30px;
   margin-right: 20px;
   text-decoration: none;
   margin: 0;
   color: rgba(35, 31, 32, 0.5);
 }
-/* line 49, ../sass/page/_portfolio.scss */
-#portfolio article > div .urls a {
+/* line 50, ../sass/page/_portfolio.scss */
+#portfolio article > div .urls a, #flickr article > div .urls a {
   margin-bottom: 10px;
   display: inline-block;
   font-family: "Lato", sans-serif;
@@ -511,41 +477,23 @@ nav li:last-child {
   font-size: 14px;
   line-height: 23px;
 }
-/* line 53, ../sass/page/_portfolio.scss */
-#portfolio article > div .urls a span {
+/* line 54, ../sass/page/_portfolio.scss */
+#portfolio article > div .urls a span, #flickr article > div .urls a span {
   text-decoration: underline;
   margin-top: 5px;
   margin-left: 16px;
   display: block;
   float: left;
 }
-/* line 65, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper {
-  *zoom: 1;
+/* line 66, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper, #flickr .slider-wrapper {
+  width: 38%;
   float: left;
-  clear: none;
-  text-align: inherit;
-  width: 50%;
-  margin-left: 0%;
-  margin-right: 0%;
   height: 100%;
   position: relative;
 }
-/* line 344, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper:before, #portfolio .slider-wrapper:after {
-  content: '';
-  display: table;
-}
-/* line 349, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper:after {
-  clear: both;
-}
-/* line 58, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper:last-child {
-  margin-right: 0%;
-}
-/* line 69, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider {
+/* line 71, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider, #flickr .slider-wrapper .slider {
   *zoom: 1;
   float: left;
   clear: none;
@@ -563,25 +511,41 @@ nav li:last-child {
   overflow: auto;
 }
 /* line 344, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper .slider:before, #portfolio .slider-wrapper .slider:after {
+#portfolio .slider-wrapper .slider:before, #flickr .slider-wrapper .slider:before, #portfolio .slider-wrapper .slider:after, #flickr .slider-wrapper .slider:after {
   content: '';
   display: table;
 }
 /* line 349, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper .slider:after {
+#portfolio .slider-wrapper .slider:after, #flickr .slider-wrapper .slider:after {
   clear: both;
 }
 /* line 58, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper .slider:last-child {
+#portfolio .slider-wrapper .slider:last-child, #flickr .slider-wrapper .slider:last-child {
   margin-right: 0%;
 }
-/* line 74, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider li {
+/* line 76, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider .slider--main, #flickr .slider-wrapper .slider .slider--main {
+  height: 421px !important;
+}
+/* line 81, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider .slider--main2 li li, #flickr .slider-wrapper .slider .slider--main2 li li {
+  height: 125px;
+  overflow: hidden;
+}
+/* line 84, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider .slider--main2 li li img, #flickr .slider-wrapper .slider .slider--main2 li li img {
+  height: auto !important;
+  -ms-transform: translateY(-14%);
+  -webkit-transform: translateY(-14%);
+  transformY: translateY(-14%);
+}
+/* line 93, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider li, #flickr .slider-wrapper .slider li {
   list-style: none;
   float: left;
 }
-/* line 77, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider li li {
+/* line 96, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider li li, #flickr .slider-wrapper .slider li li {
   *zoom: 1;
   float: left;
   clear: none;
@@ -594,24 +558,24 @@ nav li:last-child {
   position: relative;
 }
 /* line 344, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper .slider li li:before, #portfolio .slider-wrapper .slider li li:after {
+#portfolio .slider-wrapper .slider li li:before, #flickr .slider-wrapper .slider li li:before, #portfolio .slider-wrapper .slider li li:after, #flickr .slider-wrapper .slider li li:after {
   content: '';
   display: table;
 }
 /* line 349, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper .slider li li:after {
+#portfolio .slider-wrapper .slider li li:after, #flickr .slider-wrapper .slider li li:after {
   clear: both;
 }
 /* line 58, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper .slider li li:last-child {
+#portfolio .slider-wrapper .slider li li:last-child, #flickr .slider-wrapper .slider li li:last-child {
   margin-right: 0%;
 }
-/* line 82, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider li li:nth-child(even) {
+/* line 101, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider li li:nth-child(even), #flickr .slider-wrapper .slider li li:nth-child(even) {
   margin-left: 3%;
 }
-/* line 85, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider li li span {
+/* line 104, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider li li span, #flickr .slider-wrapper .slider li li span {
   position: absolute;
   left: 0;
   width: 100%;
@@ -621,22 +585,22 @@ nav li:last-child {
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 92, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider li li span:hover {
+/* line 111, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider li li span:hover, #flickr .slider-wrapper .slider li li span:hover {
   background-color: rgba(248, 201, 49, 0);
 }
-/* line 96, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider li li img {
+/* line 115, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider li li img, #flickr .slider-wrapper .slider li li img {
   width: 100%;
   height: 125px;
 }
-/* line 102, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider .dots {
+/* line 121, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider .dots, #flickr .slider-wrapper .slider .dots {
   display: table;
   margin: 0px auto;
 }
-/* line 105, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider .dots li {
+/* line 124, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider .dots li, #flickr .slider-wrapper .slider .dots li {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -650,8 +614,8 @@ nav li:last-child {
   -moz-transition: background .5s, opacity .5s;
   transition: background .5s, opacity .5s;
 }
-/* line 118, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider .dots li.active {
+/* line 137, ../sass/page/_portfolio.scss */
+#portfolio .slider-wrapper .slider .dots li.active, #flickr .slider-wrapper .slider .dots li.active {
   background: #231f20;
   opacity: 1;
 }

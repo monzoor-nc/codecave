@@ -4,20 +4,67 @@
 	<title>CodeCave.us</title>
 	<link href="stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="https://rawgit.com/flatiron/director/master/build/director.min.js"></script>
+	<script type="text/javascript" src="js/jquery.waitforimages.min.js"></script>
+	<script>
+    $('document').ready(function() {
+      //
+      // create some functions to be executed when
+      // the correct route is issued by the user.
+      //
+      var showAuthorInfo = function () { console.log("showAuthorInfo"); };
+      var listBooks = function () { console.log("listBooks"); };
+
+      var allroutes = function() {
+        var route = window.location.hash.slice(2);
+        var sections = $('section');
+        var section;
+
+        section = sections.filter('[data-route=' + route + ']');
+
+        if (section.length) {
+          sections.hide(250);
+          section.show(250);
+        }
+      };
+
+      //
+      // define the routing table.
+      //
+      var routes = {
+        '/index.html': showAuthorInfo,
+        '/books': listBooks
+      };
+
+      //
+      // instantiate the router.
+      //
+      var router = Router(routes);
+
+      //
+      // a global configuration setting.
+      //
+      router.configure({
+        on: allroutes
+      });
+
+      router.init();
+    });
+    </script>
 </head>
 <body>
 	<header>
 		<nav>
 			<ul>
-				<li><a href=""><span class="codecave-home"></span></a></li>
-				<li><a href=""><span class="codecave-briefcase"></span></a></li>
-				<li><a href=""><span class="codecave-camera"></span></a></li>
-				<li><a href=""><span class="codecave-envelope"></span></a></li>
+				<li><a class="link" data-link="home" href="#home"><span class="codecave-home"></span></a></li>
+				<li><a class="link" data-link="portfolio" href="#portfolio"><span class="codecave-briefcase"></span></a></li>
+				<li><a class="link" data-link="flickr" href="#flickr"><span class="codecave-camera"></span></a></li>
+				<li><a class="link" data-link="contact" href="#contact"><span class="codecave-envelope"></span></a></li>
 			</ul>
 		</nav>
 	</header>
 
-	<!-- <section id="home">
+	<section id="home">
 		<article>
 			<header>
 				<h2>Imagination is the limit of my color</h2>
@@ -28,7 +75,7 @@
 
 			Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, </p>
 		</article>
-	</section> -->
+	</section>
 
 	<section id="portfolio">
 		<article>
@@ -42,14 +89,41 @@
 
 				Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, </p>
 				<div class="urls">
-					<a href="https://github.com/monzoor-nc" target="_blank"><span class="codecave-github"></span><span>https://github.com/monzoor-nc</span></a><br>
-					<a href="https://www.behance.net/monzoor" target="_blank"><span class="codecave-behance"></span><span>https://www.behance.net/monzoor</span></a>
+					<a href="https://github.com/monzoor-nc" target="_blank"><span class="codecave-github"></span><span>monzoor-nc</span></a><br>
+					<a href="https://www.behance.net/monzoor" target="_blank"><span class="codecave-behance"></span><span>monzoor</span></a>
 				</div>
 			</div>
 		</article>
 		<div class="slider-wrapper">
 			<div class="slider">
-				<ul class="test">
+				<ul class="slider--main">
+					
+				</ul>
+				
+			</div>
+		</div>
+	</section>
+
+	<section id="flickr">
+		<article>
+			<div>
+				<header>
+					<h1>The World of my Imagination</h1>
+					<h2>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years.</h2>
+				</header>
+
+				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a <br><br>
+
+				Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, </p>
+				<div class="urls">
+					<a href="https://github.com/monzoor-nc" target="_blank"><span class="codecave-github"></span><span>monzoor-nc</span></a><br>
+					<a href="https://www.behance.net/monzoor" target="_blank"><span class="codecave-behance"></span><span>monzoor</span></a>
+				</div>
+			</div>
+		</article>
+		<div class="slider-wrapper">
+			<div class="slider">
+				<ul class="slider--main2">
 
 				</ul>
 				
@@ -60,6 +134,7 @@
 
 
 	<script type="text/javascript" src="js/unslider.min.js"></script>
+	
 	<script type="text/javascript" src="js/user.js"></script>
 
 </body>

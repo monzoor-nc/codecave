@@ -3,12 +3,17 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 	background-color: $brand-color;
 	color: $brand-color2;
+	overflow: hidden;
 }
 * a{
 	text-decoration: none;
 	color: $brand-color2;
 }
 
+section {
+	float: left !important;
+	position: relative;
+}
 %center{
 	position: absolute;
 	left: 0;
@@ -16,4 +21,13 @@ body{
 	top: 0;
 	bottom: 0;
 	margin: auto;
+}
+.QOverlay {
+	background-color: #000000;
+	z-index: 9999;
+}
+
+.QLoader {
+	background-color: #CCCCCC;
+	height: 1px;
 }
