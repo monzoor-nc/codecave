@@ -1,22 +1,8 @@
-/*  Syntax Quick Reference
-  --------------------------
-  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
-  span($ratio: 1, $offset: 0)
-  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
-  unshift()
-  edit()
-  center($max_width: 1410px, $pad: 0)
-  stack($pad: 0, $align: false)
-  unstack()
-  align($direction: both)
-  cf()
-*/
-#home{
-	// @include center(1100px,20px);
-	// @extend %center;
+.home__wrapper{
 	background: url(../images/monzoor.png) no-repeat right bottom ;
 	position: relative;
-	article{
+	z-index: 1;
+	.home--article{
 		@include col(1/2);
 		@extend %center;
 		height: 500px;
@@ -35,3 +21,16 @@
 		}
 	}
 }
+.home--background{
+	content: "";
+	background: url(../images/bg-3.png) no-repeat right bottom ;
+	background-size: cover;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	opacity: .2;
+	position: absolute;
+	z-index: 0;
+}
+

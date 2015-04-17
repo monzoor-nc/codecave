@@ -219,7 +219,7 @@ section {
 }
 
 /* line 17, ../sass/common/_common.scss */
-nav, #home article, #portfolio article > div, #flickr article > div {
+nav, .home__wrapper .home--article, .portfolio__wrapper .porfolio--article .portfolio__content--center, .flickr__wrapper .porfolio--article .portfolio__content--center, .flickr__wrapper .flickr--article .portfolio__content--center, .flickr__wrapper .flickr--article .flickr__content--center, .contact__wrapper .contact__wrapper--inner {
   position: absolute;
   left: 0;
   right: 0;
@@ -297,7 +297,7 @@ nav {
   width: 40px;
   height: 163px;
   margin: auto 0;
-  z-index: 999999;
+  z-index: 999;
   position: fixed;
 }
 /* line 9, ../sass/common/_nav.scss */
@@ -310,190 +310,15 @@ nav li:last-child {
   margin-bottom: 0;
 }
 
-/*  Syntax Quick Reference
-  --------------------------
-  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
-  span($ratio: 1, $offset: 0)
-  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
-  unshift()
-  edit()
-  center($max_width: 1410px, $pad: 0)
-  stack($pad: 0, $align: false)
-  unstack()
-  align($direction: both)
-  cf()
-*/
-/* line 14, ../sass/page/_index.scss */
-#home {
-  background: url(../images/monzoor.png) no-repeat right bottom;
-  position: relative;
-}
-/* line 19, ../sass/page/_index.scss */
-#home article {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 48.5%;
-  margin-left: 0%;
-  margin-right: 3%;
-  height: 500px;
-  text-align: center;
-  margin-left: 10%;
-}
-/* line 344, ../sass/vendor/jeet/_grid.scss */
-#home article:before, #home article:after {
-  content: '';
-  display: table;
-}
-/* line 349, ../sass/vendor/jeet/_grid.scss */
-#home article:after {
-  clear: both;
-}
-/* line 58, ../sass/vendor/jeet/_grid.scss */
-#home article:last-child {
-  margin-right: 0%;
-}
-/* line 25, ../sass/page/_index.scss */
-#home article h2 {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 48px;
-  line-height: 50px;
-}
-/* line 28, ../sass/page/_index.scss */
-#home article h1 {
-  margin-top: 20px;
-  font-family: "Grand Hotel", cursive;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 40px;
-  line-height: 50px;
-}
-/* line 32, ../sass/page/_index.scss */
-#home article p {
-  margin-top: 20px;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 23px;
-}
-
-/*  Syntax Quick Reference
-  --------------------------
-  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
-  span($ratio: 1, $offset: 0)
-  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
-  unshift()
-  edit()
-  center($max_width: 1410px, $pad: 0)
-  stack($pad: 0, $align: false)
-  unstack()
-  align($direction: both)
-  cf()
-*/
-/* line 17, ../sass/page/_portfolio.scss */
-#portfolio article, #flickr article {
-  *zoom: 1;
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 50%;
-  margin-left: 0%;
-  margin-right: 0%;
-  height: 100%;
-  text-align: center;
-}
-/* line 344, ../sass/vendor/jeet/_grid.scss */
-#portfolio article:before, #flickr article:before, #portfolio article:after, #flickr article:after {
-  content: '';
-  display: table;
-}
-/* line 349, ../sass/vendor/jeet/_grid.scss */
-#portfolio article:after, #flickr article:after {
-  clear: both;
-}
-/* line 58, ../sass/vendor/jeet/_grid.scss */
-#portfolio article:last-child, #flickr article:last-child {
-  margin-right: 0%;
-}
-/* line 21, ../sass/page/_portfolio.scss */
-#portfolio article h1, #flickr article h1 {
-  font-family: "Dancing Script", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 45px;
-  line-height: 48px;
-}
-/* line 24, ../sass/page/_portfolio.scss */
-#portfolio article h2, #flickr article h2 {
-  margin-top: 20px;
-  text-transform: uppercase;
-  letter-spacing: .15em;
-  font-family: "EB Garamond", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 23px;
-}
-/* line 30, ../sass/page/_portfolio.scss */
-#portfolio article p, #flickr article p {
-  margin-top: 20px;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 23px;
-}
-/* line 34, ../sass/page/_portfolio.scss */
-#portfolio article > div, #flickr article > div {
-  width: 40%;
-  height: 500px;
-  margin-left: 10%;
-}
-/* line 39, ../sass/page/_portfolio.scss */
-#portfolio article > div .urls, #flickr article > div .urls {
-  float: left;
-  margin-top: 30px;
-  text-align: left;
-}
-/* line 43, ../sass/page/_portfolio.scss */
-#portfolio article > div .urls [class^="codecave-"], #flickr article > div .urls [class^="codecave-"] {
-  font-size: 30px;
-  margin-right: 20px;
-  text-decoration: none;
-  margin: 0;
-  color: rgba(35, 31, 32, 0.5);
-}
-/* line 50, ../sass/page/_portfolio.scss */
-#portfolio article > div .urls a, #flickr article > div .urls a {
-  margin-bottom: 10px;
-  display: inline-block;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 23px;
-}
-/* line 54, ../sass/page/_portfolio.scss */
-#portfolio article > div .urls a span, #flickr article > div .urls a span {
-  text-decoration: underline;
-  margin-top: 5px;
-  margin-left: 16px;
-  display: block;
-  float: left;
-}
-/* line 66, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper, #flickr .slider-wrapper {
+/* line 1, ../sass/common/_slider.scss */
+.slider-wrapper {
   width: 38%;
   float: left;
   height: 100%;
   position: relative;
 }
-/* line 71, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider, #flickr .slider-wrapper .slider {
+/* line 6, ../sass/common/_slider.scss */
+.slider-wrapper .slider {
   *zoom: 1;
   float: left;
   clear: none;
@@ -511,41 +336,43 @@ nav li:last-child {
   overflow: auto;
 }
 /* line 344, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper .slider:before, #flickr .slider-wrapper .slider:before, #portfolio .slider-wrapper .slider:after, #flickr .slider-wrapper .slider:after {
+.slider-wrapper .slider:before, .slider-wrapper .slider:after {
   content: '';
   display: table;
 }
 /* line 349, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper .slider:after, #flickr .slider-wrapper .slider:after {
+.slider-wrapper .slider:after {
   clear: both;
 }
 /* line 58, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper .slider:last-child, #flickr .slider-wrapper .slider:last-child {
+.slider-wrapper .slider:last-child {
   margin-right: 0%;
 }
-/* line 76, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider .slider--main, #flickr .slider-wrapper .slider .slider--main {
+/* line 11, ../sass/common/_slider.scss */
+.slider-wrapper .slider .slider--main {
   height: 421px !important;
 }
-/* line 81, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider .slider--main2 li li, #flickr .slider-wrapper .slider .slider--main2 li li {
+
+/* line 18, ../sass/common/_slider.scss */
+.slider--main2 li li {
   height: 125px;
   overflow: hidden;
 }
-/* line 84, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider .slider--main2 li li img, #flickr .slider-wrapper .slider .slider--main2 li li img {
+/* line 21, ../sass/common/_slider.scss */
+.slider--main2 li li img {
   height: auto !important;
   -ms-transform: translateY(-14%);
   -webkit-transform: translateY(-14%);
   transformY: translateY(-14%);
 }
-/* line 93, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider li, #flickr .slider-wrapper .slider li {
+
+/* line 30, ../sass/common/_slider.scss */
+li {
   list-style: none;
   float: left;
 }
-/* line 96, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider li li, #flickr .slider-wrapper .slider li li {
+/* line 33, ../sass/common/_slider.scss */
+li li {
   *zoom: 1;
   float: left;
   clear: none;
@@ -558,24 +385,24 @@ nav li:last-child {
   position: relative;
 }
 /* line 344, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper .slider li li:before, #flickr .slider-wrapper .slider li li:before, #portfolio .slider-wrapper .slider li li:after, #flickr .slider-wrapper .slider li li:after {
+li li:before, li li:after {
   content: '';
   display: table;
 }
 /* line 349, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper .slider li li:after, #flickr .slider-wrapper .slider li li:after {
+li li:after {
   clear: both;
 }
 /* line 58, ../sass/vendor/jeet/_grid.scss */
-#portfolio .slider-wrapper .slider li li:last-child, #flickr .slider-wrapper .slider li li:last-child {
+li li:last-child {
   margin-right: 0%;
 }
-/* line 101, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider li li:nth-child(even), #flickr .slider-wrapper .slider li li:nth-child(even) {
+/* line 38, ../sass/common/_slider.scss */
+li li:nth-child(even) {
   margin-left: 3%;
 }
-/* line 104, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider li li span, #flickr .slider-wrapper .slider li li span {
+/* line 41, ../sass/common/_slider.scss */
+li li span {
   position: absolute;
   left: 0;
   width: 100%;
@@ -585,22 +412,23 @@ nav li:last-child {
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 111, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider li li span:hover, #flickr .slider-wrapper .slider li li span:hover {
+/* line 48, ../sass/common/_slider.scss */
+li li span:hover {
   background-color: rgba(248, 201, 49, 0);
 }
-/* line 115, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider li li img, #flickr .slider-wrapper .slider li li img {
+/* line 52, ../sass/common/_slider.scss */
+li li img {
   width: 100%;
   height: 125px;
 }
-/* line 121, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider .dots, #flickr .slider-wrapper .slider .dots {
+
+/* line 58, ../sass/common/_slider.scss */
+.dots {
   display: table;
   margin: 0px auto;
 }
-/* line 124, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider .dots li, #flickr .slider-wrapper .slider .dots li {
+/* line 61, ../sass/common/_slider.scss */
+.dots li {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -614,8 +442,673 @@ nav li:last-child {
   -moz-transition: background .5s, opacity .5s;
   transition: background .5s, opacity .5s;
 }
-/* line 137, ../sass/page/_portfolio.scss */
-#portfolio .slider-wrapper .slider .dots li.active, #flickr .slider-wrapper .slider .dots li.active {
+/* line 74, ../sass/common/_slider.scss */
+.dots li.active {
   background: #231f20;
   opacity: 1;
+}
+
+/* line 1, ../sass/page/_index.scss */
+.home__wrapper {
+  background: url(../images/monzoor.png) no-repeat right bottom;
+  position: relative;
+  z-index: 1;
+}
+/* line 5, ../sass/page/_index.scss */
+.home__wrapper .home--article {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+  height: 500px;
+  text-align: center;
+  margin-left: 10%;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.home__wrapper .home--article:before, .home__wrapper .home--article:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.home__wrapper .home--article:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+.home__wrapper .home--article:last-child {
+  margin-right: 0%;
+}
+/* line 11, ../sass/page/_index.scss */
+.home__wrapper .home--article h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 50px;
+}
+/* line 14, ../sass/page/_index.scss */
+.home__wrapper .home--article h1 {
+  margin-top: 20px;
+  font-family: "Grand Hotel", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 50px;
+}
+/* line 18, ../sass/page/_index.scss */
+.home__wrapper .home--article p {
+  margin-top: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+/* line 24, ../sass/page/_index.scss */
+.home--background {
+  content: "";
+  background: url(../images/bg-3.png) no-repeat right bottom;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: .2;
+  position: absolute;
+  z-index: 0;
+}
+
+/* line 1, ../sass/page/_portfolio.scss */
+.portfolio__wrapper, .flickr__wrapper {
+  background: url(../images/bg-2.png) no-repeat;
+  background-size: cover;
+}
+/* line 4, ../sass/page/_portfolio.scss */
+.portfolio__wrapper .porfolio--article, .flickr__wrapper .porfolio--article, .flickr__wrapper .flickr--article {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  height: 100%;
+  text-align: center;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.portfolio__wrapper .porfolio--article:before, .flickr__wrapper .porfolio--article:before, .flickr__wrapper .flickr--article:before, .portfolio__wrapper .porfolio--article:after, .flickr__wrapper .porfolio--article:after, .flickr__wrapper .flickr--article:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.portfolio__wrapper .porfolio--article:after, .flickr__wrapper .porfolio--article:after, .flickr__wrapper .flickr--article:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+.portfolio__wrapper .porfolio--article:last-child, .flickr__wrapper .porfolio--article:last-child, .flickr__wrapper .flickr--article:last-child {
+  margin-right: 0%;
+}
+/* line 8, ../sass/page/_portfolio.scss */
+.portfolio__wrapper .porfolio--article h1, .flickr__wrapper .porfolio--article h1, .flickr__wrapper .flickr--article h1 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 45px;
+  line-height: 48px;
+}
+/* line 11, ../sass/page/_portfolio.scss */
+.portfolio__wrapper .porfolio--article h2, .flickr__wrapper .porfolio--article h2, .flickr__wrapper .flickr--article h2 {
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 23px;
+}
+/* line 17, ../sass/page/_portfolio.scss */
+.portfolio__wrapper .porfolio--article p, .flickr__wrapper .porfolio--article p, .flickr__wrapper .flickr--article p {
+  margin-top: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 23px;
+}
+/* line 21, ../sass/page/_portfolio.scss */
+.portfolio__wrapper .porfolio--article .portfolio__content--center, .flickr__wrapper .porfolio--article .portfolio__content--center, .flickr__wrapper .flickr--article .portfolio__content--center, .flickr__wrapper .flickr--article .flickr__content--center {
+  width: 40%;
+  height: 500px;
+  margin-left: 10%;
+}
+/* line 27, ../sass/page/_portfolio.scss */
+.portfolio__wrapper .porfolio--article .urls, .flickr__wrapper .porfolio--article .urls, .flickr__wrapper .flickr--article .urls {
+  float: left;
+  margin-top: 30px;
+  text-align: left;
+}
+/* line 31, ../sass/page/_portfolio.scss */
+.portfolio__wrapper .porfolio--article .urls [class^="codecave-"], .flickr__wrapper .porfolio--article .urls [class^="codecave-"], .flickr__wrapper .flickr--article .urls [class^="codecave-"] {
+  font-size: 30px;
+  margin-right: 20px;
+  text-decoration: none;
+  margin: 0;
+  color: rgba(35, 31, 32, 0.5);
+}
+/* line 38, ../sass/page/_portfolio.scss */
+.portfolio__wrapper .porfolio--article .urls a, .flickr__wrapper .porfolio--article .urls a, .flickr__wrapper .flickr--article .urls a {
+  margin-bottom: 10px;
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 23px;
+}
+/* line 42, ../sass/page/_portfolio.scss */
+.portfolio__wrapper .porfolio--article .urls a span, .flickr__wrapper .porfolio--article .urls a span, .flickr__wrapper .flickr--article .urls a span {
+  text-decoration: underline;
+  margin-top: 5px;
+  margin-left: 16px;
+  display: block;
+  float: left;
+}
+
+/* line 53, ../sass/page/_portfolio.scss */
+.slider-wrapper {
+  width: 38%;
+  float: left;
+  height: 100%;
+  position: relative;
+}
+/* line 58, ../sass/page/_portfolio.scss */
+.slider-wrapper .slider {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 82.83333%;
+  margin-left: 0%;
+  margin-right: 3%;
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 460px !important;
+  position: relative;
+  overflow: auto;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.slider-wrapper .slider:before, .slider-wrapper .slider:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.slider-wrapper .slider:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+.slider-wrapper .slider:last-child {
+  margin-right: 0%;
+}
+/* line 63, ../sass/page/_portfolio.scss */
+.slider-wrapper .slider .slider--main {
+  height: 421px !important;
+}
+
+/* line 70, ../sass/page/_portfolio.scss */
+.slider--main2 li li {
+  height: 125px;
+  overflow: hidden;
+}
+/* line 73, ../sass/page/_portfolio.scss */
+.slider--main2 li li img {
+  height: auto !important;
+  -ms-transform: translateY(-14%);
+  -webkit-transform: translateY(-14%);
+  transformY: translateY(-14%);
+}
+
+/* line 82, ../sass/page/_portfolio.scss */
+li {
+  list-style: none;
+  float: left;
+}
+/* line 85, ../sass/page/_portfolio.scss */
+li li {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 48.5%;
+  margin-left: 0%;
+  margin-right: 3%;
+  margin-right: 0;
+  margin-bottom: 3%;
+  position: relative;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+li li:before, li li:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+li li:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+li li:last-child {
+  margin-right: 0%;
+}
+/* line 90, ../sass/page/_portfolio.scss */
+li li:nth-child(even) {
+  margin-left: 3%;
+}
+/* line 93, ../sass/page/_portfolio.scss */
+li li span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(248, 201, 49, 0.5);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/* line 100, ../sass/page/_portfolio.scss */
+li li span:hover {
+  background-color: rgba(248, 201, 49, 0);
+}
+/* line 104, ../sass/page/_portfolio.scss */
+li li img {
+  width: 100%;
+  height: 125px;
+}
+
+/* line 110, ../sass/page/_portfolio.scss */
+.dots {
+  display: table;
+  margin: 0px auto;
+}
+/* line 113, ../sass/page/_portfolio.scss */
+.dots li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 4px;
+  text-indent: -999em;
+  background-color: rgba(35, 31, 32, 0.5);
+  border-radius: 100%;
+  cursor: pointer;
+  opacity: .4;
+  -webkit-transition: background .5s, opacity .5s;
+  -moz-transition: background .5s, opacity .5s;
+  transition: background .5s, opacity .5s;
+}
+/* line 126, ../sass/page/_portfolio.scss */
+.dots li.active {
+  background: #231f20;
+  opacity: 1;
+}
+
+/* line 132, ../sass/page/_portfolio.scss */
+.flickr__wrapper {
+  background: url(../images/bg-4.png) no-repeat right bottom;
+  background-size: 80%;
+}
+
+/* line 1, ../sass/page/_xflickr.scss */
+.flickr__wrapper {
+  background: url(../images/bg-4.1.png) no-repeat right bottom;
+  background-size: 80%;
+}
+/* line 5, ../sass/page/_xflickr.scss */
+.flickr__wrapper .flickr__content--left {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 41.66667%;
+  margin-left: 0%;
+  margin-right: 0%;
+  display: table;
+  height: 100%;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.flickr__wrapper .flickr__content--left:before, .flickr__wrapper .flickr__content--left:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.flickr__wrapper .flickr__content--left:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+.flickr__wrapper .flickr__content--left:last-child {
+  margin-right: 0%;
+}
+/* line 9, ../sass/page/_xflickr.scss */
+.flickr__wrapper .flickr__content--left .flickr__content--text {
+  width: 90%;
+  padding-left: 10%;
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 14, ../sass/page/_xflickr.scss */
+.flickr__wrapper .flickr__content--left .flickr__content--text h1 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 45px;
+  line-height: 48px;
+  text-align: center;
+}
+/* line 18, ../sass/page/_xflickr.scss */
+.flickr__wrapper .flickr__content--left .flickr__content--text p {
+  letter-spacing: .15em;
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  margin-top: 20px;
+}
+/* line 26, ../sass/page/_xflickr.scss */
+.flickr__wrapper .flickr__content--right {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 58.33333%;
+  margin-left: 0%;
+  margin-right: 0%;
+  display: table;
+  height: 100%;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.flickr__wrapper .flickr__content--right:before, .flickr__wrapper .flickr__content--right:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.flickr__wrapper .flickr__content--right:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+.flickr__wrapper .flickr__content--right:last-child {
+  margin-right: 0%;
+}
+/* line 30, ../sass/page/_xflickr.scss */
+.flickr__wrapper .flickr__content--right .flickr__content--image {
+  width: 95%;
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 5%;
+}
+/* line 35, ../sass/page/_xflickr.scss */
+.flickr__wrapper .flickr__content--right .flickr__content--image .flickr__content--image-wrapper {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 24.25%;
+  margin-left: 0%;
+  margin-right: 1%;
+  margin-bottom: 5px;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.flickr__wrapper .flickr__content--right .flickr__content--image .flickr__content--image-wrapper:before, .flickr__wrapper .flickr__content--right .flickr__content--image .flickr__content--image-wrapper:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.flickr__wrapper .flickr__content--right .flickr__content--image .flickr__content--image-wrapper:after {
+  clear: both;
+}
+/* line 50, ../sass/vendor/jeet/_grid.scss */
+.flickr__wrapper .flickr__content--right .flickr__content--image .flickr__content--image-wrapper:nth-of-type(4n) {
+  margin-right: 0%;
+  float: right;
+}
+/* line 54, ../sass/vendor/jeet/_grid.scss */
+.flickr__wrapper .flickr__content--right .flickr__content--image .flickr__content--image-wrapper:nth-of-type(4n + 1) {
+  clear: both;
+}
+/* line 38, ../sass/page/_xflickr.scss */
+.flickr__wrapper .flickr__content--right .flickr__content--image .flickr__content--image-wrapper img {
+  width: 100%;
+}
+
+/* line 45, ../sass/page/_xflickr.scss */
+.contact__wrapper {
+  display: table;
+}
+/* line 47, ../sass/page/_xflickr.scss */
+.contact__wrapper .contact__wrapper--inner {
+  *zoom: 1;
+  width: auto;
+  max-width: 1000px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  height: 600px;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.contact__wrapper .contact__wrapper--inner:before, .contact__wrapper .contact__wrapper--inner:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.contact__wrapper .contact__wrapper--inner:after {
+  clear: both;
+}
+/* line 54, ../sass/page/_xflickr.scss */
+.contact__wrapper h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 35px;
+  line-height: 30px;
+}
+
+/* line 60, ../sass/page/_xflickr.scss */
+.form {
+  width: 650px;
+  margin: auto;
+  margin-top: 5em;
+  margin-bottom: 6em;
+}
+
+/* line 69, ../sass/page/_xflickr.scss */
+.btn-primary {
+  box-shadow: 0;
+  border: none;
+  background-color: #3F2E40;
+  border-color: #48c9b0;
+  color: #ffffff;
+  outline: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  transition: all .5s;
+  padding: 10px 19px;
+  font-size: 17px;
+  line-height: 1.471;
+  width: 30%;
+  border-radius: 3px;
+  text-transform: uppercase;
+  margin: auto;
+  margin-top: 1.44em;
+  margin-bottom: .55em;
+  display: inherit;
+}
+
+/* line 90, ../sass/page/_xflickr.scss */
+.btn-primary:hover {
+  background-color: #1ABC9C;
+}
+
+/* line 94, ../sass/page/_xflickr.scss */
+.form-group {
+  position: relative;
+  opacity: 1;
+  transition: .6s;
+}
+
+/* line 100, ../sass/page/_xflickr.scss */
+.input-field-icon {
+  color: #bfc9ca;
+  font-size: 18px;
+  position: absolute;
+  right: 10px;
+  bottom: 12px;
+  transition: .6s;
+}
+
+/* line 109, ../sass/page/_xflickr.scss */
+.form-control {
+  transition: opacity .6s;
+  opacity: 1;
+  border: 0;
+  border-bottom: 2px solid #231f20;
+  border-radius: 0;
+  font-size: 15px;
+  line-height: 1.467;
+  padding: 4px;
+  height: 42px;
+  -webkit-appearance: none;
+}
+
+/* line 122, ../sass/page/_xflickr.scss */
+input, textarea {
+  transition: all 800ms;
+  resize: none;
+  /* removes the resize handle */
+  overflow: auto;
+  /* removes default scrolling bars in IE */
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 4px;
+  color: #231f20;
+  margin-top: 1.25em;
+  background-color: transparent;
+}
+/* line 4, ../sass/vendor/bourbon/css3/_placeholder.scss */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #231f20;
+}
+/* line 4, ../sass/vendor/bourbon/css3/_placeholder.scss */
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #231f20;
+}
+/* line 4, ../sass/vendor/bourbon/css3/_placeholder.scss */
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #231f20;
+}
+/* line 4, ../sass/vendor/bourbon/css3/_placeholder.scss */
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #231f20;
+}
+
+/* line 140, ../sass/page/_xflickr.scss */
+.has-error input, .has-error textarea {
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+/* line 145, ../sass/page/_xflickr.scss */
+.has-error .input-field-icon {
+  color: #e74c3c;
+}
+
+/* line 149, ../sass/page/_xflickr.scss */
+.has-success input, .has-success textarea {
+  color: #2ecc71;
+  border-color: #2ecc71;
+}
+
+/* line 154, ../sass/page/_xflickr.scss */
+.has-success .input-field-icon {
+  color: #2ecc71;
+}
+
+/* line 159, ../sass/page/_xflickr.scss */
+input:focus, textarea:focus {
+  border-color: #48c9b0;
+  color: #34495e;
+}
+
+/* line 164, ../sass/page/_xflickr.scss */
+input:focus + .input-field-icon {
+  color: #34495e;
+}
+
+/* line 168, ../sass/page/_xflickr.scss */
+textarea.form-control {
+  height: 120px;
+  transition: .6s;
+}
+
+/* line 173, ../sass/page/_xflickr.scss */
+textarea.form-control:focus {
+  height: 200px;
+  border-color: #48c9b0;
+}
+
+/* line 178, ../sass/page/_xflickr.scss */
+.social {
+  display: block;
+  margin: auto;
+  width: 250px;
+}
+
+/* line 184, ../sass/page/_xflickr.scss */
+.social li {
+  display: inline-block;
+  list-style: none;
+  margin: auto;
+  margin-right: 10px;
+}
+
+/* line 191, ../sass/page/_xflickr.scss */
+.social li a {
+  display: block;
+  text-decoration: none;
+  color: #999;
+  border: 2px solid #999;
+  border-radius: 100%;
+  font-size: 26px;
+  width: 34px;
+  padding: 3px;
+  text-align: center;
+  transition: all .4s;
+}
+
+/* line 204, ../sass/page/_xflickr.scss */
+.social li a:hover {
+  background: #999;
+  color: white;
+}
+
+/* line 209, ../sass/page/_xflickr.scss */
+.social li a span {
+  margin-top: 4px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  /* line 216, ../sass/page/_xflickr.scss */
+  .form {
+    width: 90%;
+    margin-top: 12%;
+  }
 }

@@ -12,6 +12,7 @@ $( document ).ready(function() {
 	$("section").css("width", WindowWidth);
 	$("section").css("height", WindowHeight);
 	$(".link").on("click", function(e){
+		e.preventDefault();
 		var UrlLink = $(this).data("link");
         $('html, body').stop().animate({
             scrollLeft: $("#"+UrlLink).offset().left
@@ -23,7 +24,7 @@ $( document ).ready(function() {
 	var FlickerData = new Array;
 
 	var PortfolioDataUrl = 'https://spreadsheets.google.com/feeds/list/1_ZomKON51x2DLoaymzPW4SeFtUj6ZFrg6bZHCBXug0g/od6/public/values?alt=json'
-	var FlickrDataUrl = 'https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=76082b424c26fe6a12f5e5ab70133cc2&user_id=22590518%40N04&format=json&nojsoncallback=1'
+	var FlickrDataUrl = 'https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=4b0479c31e89d2f2b21169d26d83c649&user_id=22590518%40N04&format=json&nojsoncallback=1'
 
 
 	AjaxCall(PortfolioDataUrl, "portfolio");
@@ -109,6 +110,93 @@ $( document ).ready(function() {
 	    	keys: false 
 	    });
 	},2000);
+
+	
+  var nameSuccess = false, emailSuccess = false, messageSuccess = false;
+  
+  var $elements = $("input, textarea");
+  $elements.on("focus", function() {
+    var $selected = $(this);
+    $elements.each(function() {
+      var $this = $(this);
+      if($this !== $selected)
+        $(this).parent().css("opacity", 0.5);
+        // $(this).css("background-color", "white");
+    });
+    $selected.parent().css("opacity", 1);
+  });
+  
+  $("#contact-name").on("blur", validateName);
+  $("#contact-email").on("blur", validateEmail);
+  $("#contact-message").on("blur", validateMessage);
+  
+  $(".form").submit(function() {
+  	// return false;
+    validateName();
+    validateEmail();
+    validateMessage();
+    
+    if(nameSuccess && emailSuccess && messageSuccess) {
+      //$(".form").slideUp();
+      return true;
+    }
+    else if(!nameSuccess){
+    	$("#contact-name").focus(); 
+    	return false;
+    } 
+    else if(!emailSuccess){
+    	$("#contact-email").focus();
+    	return false;
+    } 
+    else if(!messageSuccess){
+    	$("#contact-message").focus();
+    	return false;
+    } 
+    else return false;
+  });
+
+function validateName(){
+  var $name = $("#contact-name");
+    var text = $name.val().trim();
+    if(text.length < 2) {
+      $name.parent().removeClass("has-success").addClass("has-error");
+      nameSuccess = false;
+    }
+    else{
+      $name.parent().removeClass("has-error").addClass("has-success");
+      nameSuccess = true;
+    }
+}
+  
+  function validateEmail(){
+    var $email = $("#contact-email");
+    var text = $email.val().trim();
+    var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+    var match = pattern.test(text);
+    if(match) {
+      $email.parent().removeClass("has-error").addClass("has-success");
+      emailSuccess = true;
+    }
+    else{
+      $email.parent().removeClass("has-success").addClass("has-error");
+      emailSuccess = false;
+    }
+  }
+  
+  function validateMessage(){
+    var $message = $("#contact-message");
+    var text = $message.val().trim();
+    
+    if(text.length > 1) {
+      $message.parent().removeClass("has-error").addClass("has-success");
+      messageSuccess = true;
+    }
+    else {
+      $message.parent().removeClass("has-success").addClass("has-error");
+      messageSuccess = false;
+    }
+  }
+
 
 
 })

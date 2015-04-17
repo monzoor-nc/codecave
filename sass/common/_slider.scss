@@ -1,55 +1,3 @@
-.portfolio__wrapper{
-	background: url(../images/bg-2.png) no-repeat;
-	background-size: cover;
-	.porfolio--article{
-		@include column(1/2, $gutter: 0);
-		height: 100%;
-		text-align: center;
-		h1{
-			@include font($dancing,400, 45px, 48px);
-		}
-		h2{
-			margin-top: 20px;
-			text-transform: uppercase;
-			letter-spacing: .15em;
-			@include font($eb,400, 18px, 23px);
-		}
-		p{
-			margin-top: 20px;
-			@include font($lato,400);
-		}
-		.portfolio__content--center{
-			width: 40%;
-			@extend %center;
-			height: 500px;
-			margin-left: 10%;
-		}
-		.urls{
-			float: left;
-			margin-top: 30px;
-			text-align: left;
-			[class^="codecave-"]{
-				font-size: 30px;
-				margin-right: 20px;
-				text-decoration: none;
-				margin: 0;
-				color: rgba($brand-color2,.5);
-			}
-			a{
-				margin-bottom: 10px;
-				display: inline-block;
-				@include font($lato,400, 14px, 23px);
-				span{
-					text-decoration: underline;
-					margin-top: 5px;
-					margin-left: 16px;
-					display: block;
-					float: left;
-				}
-			}
-		}
-	}
-}
 .slider-wrapper{
 	width: 38%;
 	float: left;
@@ -126,17 +74,6 @@ li{
 		&.active{
 			background: $brand-color2;
 			opacity: 1;
-		}
-	}
-}
-.flickr__wrapper{
-	@extend .portfolio__wrapper;
-	background: url(../images/bg-4.png) no-repeat right bottom ;
-	background-size: 80%;
-	.flickr--article{
-		@extend .porfolio--article;
-		.flickr__content--center{
-			@extend .portfolio__content--center;	
 		}
 	}
 }
